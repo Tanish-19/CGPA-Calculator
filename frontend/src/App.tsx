@@ -109,7 +109,7 @@ function App() {
   // ⭐ Save silently to database
   const saveToDatabase = async (name: string, cgpa: number) => {
     try {
-      await fetch("http://localhost:3001/api/cgpa", {
+      await fetch("https://cgpa-calculator-tdsg.onrender.com/api/cgpa", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, cgpa }),
