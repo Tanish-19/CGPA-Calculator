@@ -10,7 +10,7 @@ interface CGPAResultProps {
 
 const saveToDatabase = async (name: string, cgpa: number) => {
   try {
-    const response = await fetch('http://localhost:5000/add-student', {
+    const response = await fetch('http://localhost:3001/add-student', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -123,6 +123,7 @@ export const CGPAResult: React.FC<CGPAResultProps> = ({ result, studentName }) =
           <Trophy className="w-6 h-6 text-yellow-400" />
           <h2 className="text-2xl font-bold text-white">CGPA Result</h2>
         </div>
+        
         <button
           onClick={() => exportPDFText(result)}  // ✅ Correctly pass the result
           className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition"

@@ -4,6 +4,7 @@ import CgpaRecord from '../models/CgpaRecord.js';  // ✅ Matches your actual fi
 const router = express.Router();
 
 router.post('/', async (req, res) => {
+  console.log("🔥 API HIT! Body received:", req.body);
   try {
     const { name, cgpa } = req.body;
 
